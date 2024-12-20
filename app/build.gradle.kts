@@ -21,7 +21,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -53,6 +53,8 @@ dependencies {
 
     implementation ("androidx.media3:media3-exoplayer:1.1.1")
     implementation ("androidx.media3:media3-ui:1.1.1")
+
+    implementation ("com.google.firebase:firebase-messaging")
 
 
     implementation(libs.androidx.core.ktx)
