@@ -24,7 +24,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 
 @Composable
 fun LogInScreen(
@@ -86,7 +85,7 @@ fun LogInScreen(
             is Result.Error -> {
                 Text(
                     text = "Login failed",
-                    color = androidx.compose.ui.graphics.Color.Red
+                    color = Color.Red
                 )
             }
             else -> {
