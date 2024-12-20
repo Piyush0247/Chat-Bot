@@ -32,6 +32,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -57,7 +58,7 @@ fun ChatScreen(roomId: String,
         messageViewModel.setRoomId(roomId) // Set the room ID only once
         messageViewModel.fetchRoomName(roomName) // Fetch the room name only once
     }
-   var changeBackgroundIndex by remember { mutableStateOf(0) }
+   var changeBackgroundIndex by remember { mutableIntStateOf(0) }
     val background = listOf(R.drawable.image1
         ,R.drawable.image2
         ,R.drawable.image3
@@ -150,7 +151,7 @@ fun ChatScreen(roomId: String,
                         value = text.value,
                         onValueChange = { text.value = it },
                         label = { Text("Enter Message") },
-                        textStyle = TextStyle.Default.copy(fontSize = 16.sp),
+                        textStyle = TextStyle.Default.copy(fontSize = 16.sp, color = Color.Black ),
                         modifier = Modifier.weight(1f).padding(8.dp),
                     )
                     IconButton(onClick = {

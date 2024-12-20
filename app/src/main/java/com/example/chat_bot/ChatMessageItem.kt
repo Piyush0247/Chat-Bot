@@ -66,16 +66,16 @@ fun ChatMessageItem(message:Message){
             colorResource(id = R.color.purple_200)else colorResource(id = R.color.light_green),
             shape = RoundedCornerShape(8.dp)).padding(8.dp)){
             Text(message.text,
-                color = Color.White,
-                style = TextStyle(fontSize = 16.sp))
+                color = Color.Black,
+                style = TextStyle(fontSize = 16.sp, ))
         }
         Spacer(Modifier.height(4.dp))
         Text(text = message.senderFirstName,
-            style = TextStyle(fontSize = 16.sp, color = Color.Gray)
+            style = TextStyle(fontSize = 16.sp, color = Color.Black)
         )
         Text(
             text = formatTimeStamp(message.timeStamp),
-            style = TextStyle(fontSize = 16.sp, color = Color.Gray)
+            style = TextStyle(fontSize = 16.sp, color = Color.Black)
         )
         Row(modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,

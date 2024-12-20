@@ -20,6 +20,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -49,7 +51,8 @@ fun LogInScreen(
             label = { Text("Email") },
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(8.dp)
+                .padding(8.dp),
+            textStyle = TextStyle(color = Color.Black)
         )
 
         OutlinedTextField(
@@ -59,7 +62,8 @@ fun LogInScreen(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(8.dp),
-            visualTransformation = PasswordVisualTransformation()
+            visualTransformation = PasswordVisualTransformation(),
+            textStyle = TextStyle(color = Color.Black)
         )
 
         Button(

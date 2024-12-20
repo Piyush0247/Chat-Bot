@@ -19,6 +19,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -38,25 +40,31 @@ fun SignUpScreen(
             onValueChange = {email = it},
             label = { Text("Email") },
             modifier = Modifier.fillMaxWidth().
-        padding(8.dp))
+        padding(8.dp),
+            textStyle = TextStyle(color = Color.Black)
+        )
+
 
         OutlinedTextField(value = password,
             onValueChange = {password = it},
             label = { Text("Password") },
             modifier = Modifier.fillMaxWidth().
-            padding(8.dp))
+            padding(8.dp),
+            textStyle = TextStyle(color = Color.Black))
 
         OutlinedTextField(value = firstName,
             onValueChange = {firstName = it},
             label = { Text("FirstName") },
             modifier = Modifier.fillMaxWidth().
-            padding(8.dp))
+            padding(8.dp),
+            textStyle = TextStyle(color = Color.Black))
 
         OutlinedTextField(value = lastName,
             onValueChange = {lastName = it},
             label = { Text("LastName") },
             modifier = Modifier.fillMaxWidth().
-            padding(8.dp))
+            padding(8.dp),
+            textStyle = TextStyle(color = Color.Black))
 
         Button(onClick = {
             authViewModel.signUp(email, password, firstName, lastName)
