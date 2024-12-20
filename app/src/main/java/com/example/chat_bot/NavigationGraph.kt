@@ -27,9 +27,9 @@ fun NavigationGraph(
                 navController.navigate("${Screen.ChatScreen.route}/${it.id}/${it.name}")
             }
         }
-        composable("${Screen.ChatScreen.route}/{roomId}/{roomName}"){
-            val roomId:String = it.arguments?.getString("roomId")?:""
-            val roomName:String = it.arguments?.getString("roomName")?:""
+        composable("${Screen.ChatScreen.route}/{roomId}/{roomName}"){ backStackEntry ->
+            val roomId:String = backStackEntry.arguments?.getString("roomId")?:""
+            val roomName:String = backStackEntry.arguments?.getString("roomName")?:""
             ChatScreen(roomId = roomId, navController = navController, roomName = roomName)
         }
 
